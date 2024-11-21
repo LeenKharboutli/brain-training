@@ -17,13 +17,12 @@ start_time = time()
 time_limit = 120
 end_time = start_time + time_limit
 
-
-multiplication_range_factor_1 = [2, 12]
-multiplication_range_factor_2 = [2, 100]
+multiplication_factor_1_range = (2, 12)
+multiplication_factor_2_range = (2, 100)
 
 def generate_multiplication_problem():
-    factor_1 = randint(multiplication_range_factor_1[0], multiplication_range_factor_1[1])
-    factor_2 = randint(multiplication_range_factor_2[0], multiplication_range_factor_2[1])
+    factor_1 = randint(*multiplication_factor_1_range)
+    factor_2 = randint(*multiplication_factor_2_range)
     ans = factor_1 * factor_2
     return factor_1, factor_2, ans
 
